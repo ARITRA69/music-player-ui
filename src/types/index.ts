@@ -11,5 +11,5 @@ export type ISong = {
     cover: string;
     top_track: boolean;
     url: string;
-    duration: number;
+    // duration: number;
 }

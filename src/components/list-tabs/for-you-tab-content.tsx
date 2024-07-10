@@ -50,11 +50,11 @@ export const ForYouTabContent: FC<ForYouTabContentProps> = ({ songs }) => {
     },
   };
 
-  const formatDuration = (duration: number) => {
-    const minutes = Math.floor(duration / 60);
-    const seconds = Math.floor(duration % 60);
-    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-  };
+  // const formatDuration = (duration: number) => {
+  //   const minutes = Math.floor(duration / 60);
+  //   const seconds = Math.floor(duration % 60);
+  //   return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  // };
 
   return (
     <div className="w-full flex flex-col gap-10">
@@ -96,7 +96,7 @@ export const ForYouTabContent: FC<ForYouTabContentProps> = ({ songs }) => {
             {currentSong?.id === song.id ? (
               <div className="h-2 w-2 rounded-full bg-green-500"></div>
             ) : (
-              <p>{formatDuration(song.duration)}</p>
+              <p>--</p>
             )}
           </motion.li>
         ))}
